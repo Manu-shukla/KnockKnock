@@ -9,25 +9,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var recordButton: UIButton!
     var audioPlayer: AVAudioPlayer!
     
-    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
+    @IBOutlet weak var active: UIActivityIndicatorView!
     @IBOutlet weak var transc: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activitySpinner.isHidden = true
+        activite.isHidden = true
+    }
+        func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        player.stop()
+        activite.stopAnimating()
+        activite.isHidden = true
     }
 
     @IBAction func playBtnIsPressed(_ sender: AnyObject) {
-        activitySpinner.isHidden = false
-        activitySpinner.startAnimating()
+        activite.isHidden = false
+        activite.startAnimating()
         requestSpeechAuth()
     }
-    
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        player.stop()
-        activitySpinner.stopAnimating()
-        activitySpinner.isHidden = true
-    }
+   
     
     func requestSpeechAuth() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
