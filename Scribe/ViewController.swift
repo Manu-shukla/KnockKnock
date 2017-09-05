@@ -47,8 +47,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         if let error = error {
                             print("There was an error: \(error)")
                         } else {
-                            self.transc.text = result?.bestTranscription.formattedString
-                        }
+                             var formattedString
+                      
+                            self.transc.text = result?.bestTranscription.s
                     }
                 }
             }
