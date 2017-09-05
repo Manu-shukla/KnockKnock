@@ -1,10 +1,3 @@
-//
-//  RoundButton.swift
-//  Scribe
-//
-//  Created by Caleb Stultz on 8/10/16.
-//  Copyright © 2016 Caleb Stultz. All rights reserved.
-//
 
 import UIKit
 
