@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  Scribe
-//
-//  Created by Caleb Stultz on 8/10/16.
-//  Copyright © 2016 Caleb Stultz. All rights reserved.
-//
+
 
 import UIKit
 import Speech
@@ -16,7 +10,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer!
     
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
-    @IBOutlet weak var transcriptionTextField: UITextView!
+    @IBOutlet weak var transc: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +47,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
                         if let error = error {
                             print("There was an error: \(error)")
                         } else {
-                            self.transcriptionTextField.text = result?.bestTranscription.formattedString
+                            self.transc.text = result?.bestTranscription.formattedString
                         }
                     }
                 }
