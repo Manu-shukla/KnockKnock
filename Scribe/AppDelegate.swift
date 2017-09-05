@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func applicationWillResignActive(_ application: UIApplication) {
-        Games should use this method to pause the game.
+        //Games should use this method to pause the game.
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
